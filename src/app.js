@@ -8,21 +8,16 @@ const app = express();
 const port = 3000;
 
 //middleware
-app.use(express.json()); //
-
+app.use(express.json()); 
 // app.use((req, res, next) => {
-//   console.log('hit 1');
-//   next()
-// })
-// app.use((req, res, next) => {
-//   console.log('hit 2');
-//   next()
+//   console.log('Main Routes')
+//   next();
 // })
 
-// const authenticate = (req, res, next) => {
-//   console.log('Pre-Processing');
-//   next()
-// }
+//testing middleware from random route not favorites
+app.get('/', (req, res) => {
+  res.json({hello: 'world'})
+})
 
 //routes
 app.use('/favorites', favorites)

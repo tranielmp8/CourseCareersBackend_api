@@ -4,6 +4,11 @@ import Database from 'better-sqlite3';
 const db = new Database('favorites.db')
 
 const router = express.Router();
+// middleware
+// router.use((req, res, next) => {
+//   console.log('favorites hit')
+//   next()
+// })
 
 
 router.get('/', (req, res) => {
